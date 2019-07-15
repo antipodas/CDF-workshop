@@ -95,7 +95,7 @@ To do so we will score each comment against the Stanford CoreNLP's sentiment mod
 
 In real-world use case we would probably filter by event of our interest but for the sake of this workshop we won't and assume all comments are given for the same event: the famous CDF workshop!
 
-Let's get started... Open [NiFi UI](http://demo.cloudera.com:9090/nifi/) and follow the steps below:
+Let's get started... Open [NiFi UI](http://demo.cloudera.com:8080/nifi/) and follow the steps below:
 
 - Step 1: Drag on drop a Process Group on the root canvas and name it **CDF Workshop**
 
