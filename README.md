@@ -101,7 +101,7 @@ Let's get started... Open [NiFi UI](http://demo.cloudera.com:8080/nifi/) and fol
 
 ![CDF Workshop process group](images/cdfprocessgroup.png)
 
-- Step 2: Go to [NiFi Registry](http://demo.cloudera.com:61080/nifi-registry/explorer/grid-list) and create a new bucket
+- Step 2: Go to [NiFi Registry](http://demo.cloudera.com:18080/nifi-registry/explorer/grid-list) and create a new bucket
   - Click on the little wrench icon at the top right corner
   - Click on the **NEW BUCKET** button
   - Name the bucket **workshop**
