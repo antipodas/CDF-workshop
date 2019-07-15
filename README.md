@@ -50,7 +50,7 @@ To get this private ip, ssh to the instance and type the command ```ifconfig```,
 
 Open a web browser and go to the following url
 
-```http://demo.cloudera.com:8080/```
+```http://demo.cloudera.com:7180/```
 
 Log in with the following credential
 
