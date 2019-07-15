@@ -61,13 +61,7 @@ If services are not started already, start all services
 
 ![Image of Ambari Start Services](images/start_services.png)
 
-It can take up to 20 minutes...
-
-![Image of Ambari Starting Services](images/starting_services.png)
-
 ### SSH to the sandbox
-
-**Copy and paste** (do not download) the content of [ppk](keys/hdp-workshop.ppk) for Windows or [pem](keys/hdp-workshop.pem) for Mac OS X
 
 On Mac use the terminal to SSH
 
