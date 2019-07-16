@@ -224,19 +224,19 @@ ssh to the AWS instance as explained above then become root
 
 Navigate to Kafka
 
-```cd /usr/hdp/current/kafka-broker```
+```cd /opt/cloudera/parcels/CDH-6.2.0-1.cdh6.2.0.p0.967373/lib/kafka/bin```
 
 Create a topic named **meetup_comment_ws**
 
-```./bin/kafka-topics.sh --create --zookeeper demo.cloudera.com:2181 --replication-factor 1 --partitions 1 --topic meetup_comment_ws```
+```kafka-topics.sh --create --zookeeper demo.cloudera.com:2181 --replication-factor 1 --partitions 1 --topic meetup_comment_ws```
 
 List topics to check that it's been created
 
-```./bin/kafka-topics.sh --list --zookeeper demo.cloudera.com:2181```
+```./kafka-topics.sh --list --zookeeper demo.cloudera.com:2181```
 
 Open a consumer so later we can monitor and verify that JSON records will stream through this topic:
 
-```./bin/kafka-console-consumer.sh --bootstrap-server demo.cloudera.com:6667 --topic meetup_comment_ws```
+```kafka-console-consumer --bootstrap-server demo.cloudera.com:9092 --topic meetup_comment_ws --from-beginning```
 
 Keep this terminal open.
 
@@ -244,7 +244,7 @@ We will now open a new terminal to publish some messages...
 
 Follow the same steps as above except for the last step where we are going to open a producer instead of a consumer:
 
-```./bin/kafka-console-producer.sh --broker-list demo.cloudera.com:6667 --topic meetup_comment_ws```
+```kafka-console-producer --broker-list demo.cloudera.com:9092 --topic meetup_comment_ws```
 
 Type anything and click enter. Then go back to the first terminal with the consumer running. You should see the same message get displayed!
 
