@@ -76,7 +76,7 @@ chmod +x setup.sh
 ./setup.sh aws default_template.json
 ```
 
-### Start all HDP and CDF services
+### Start all CDH and CDF services
 
 **They should be already started**
 
@@ -91,7 +91,7 @@ Password: admin
 
 If services are not started already, start all services
 
-![Image of Ambari Start Services](images/start_services.png)
+![Image of CM Start Services](images/start_services.png)
 
 
 
@@ -130,7 +130,8 @@ Let's get started... Open [NiFi UI](http://demo.cloudera.com:8080/nifi/) and fol
   - Click on Controller Settings
   ![Controller Settings](images/controller-settings.png)
   - Click on Registry Clientes
-  - Add Registry 
+  - Add Registry
+  - URL: **http://demo.cloudera.com:18080**
   ![Add Registry](images/add-registry.png)
   
   
