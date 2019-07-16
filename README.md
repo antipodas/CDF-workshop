@@ -126,6 +126,8 @@ Let's get started... Open [NiFi UI](http://demo.cloudera.com:8080/nifi/) and fol
   - Click on the **NEW BUCKET** button
   - Name the bucket **workshop**
   
+![NiFi Registry bucket creation](images/registry-bucket.png)
+  
 - Step 3: Go back to NiFi UI and click on settings top right corner
   - Click on Controller Settings
   ![Controller Settings](images/controller-settings.png)
@@ -133,9 +135,6 @@ Let's get started... Open [NiFi UI](http://demo.cloudera.com:8080/nifi/) and fol
   - Add Registry
   - URL: **http://demo.cloudera.com:18080**
   ![Add Registry](images/add-registry.png)
-  
-  
-![NiFi Registry bucket creation](images/registry-bucket.png)
 
 - Step 3: Go back to NiFi UI and right click on the previously created process group
   - Click on Version > Start version control
