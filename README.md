@@ -3,13 +3,14 @@
 
 ## Prerequisite
 
-**Although this AMI is not public and is available for Cloudera workhops only, the steps can be reproduced in your own environment**
-
-- Launch AWS AMI **ami-08f9b201c6fb5fa46** with **t2.2xlarge** instance type
+- Launch AWS instance with **t2.2xlarge** instance type
 - Keep default storage (300GB SSD)
+- Add Elastic IP
 - Set security group with:
-  - Type: All TCP
+  - Type: All Traffic
   - Source: My IP
+  - Type: All Traffic
+  - Source: Elastic IP
 - Choose an existing or create a new key pair
 
 ## Content
@@ -105,6 +106,14 @@ Let's get started... Open [NiFi UI](http://demo.cloudera.com:8080/nifi/) and fol
   - Click on the little wrench icon at the top right corner
   - Click on the **NEW BUCKET** button
   - Name the bucket **workshop**
+  
+- Step 3: Go back to NiFi UI and click on settings top right corner
+  - Click on Controller Settings
+  ![Controller Settings](images/controller-settings.png)
+  - Click on Registry Clientes
+  - Add Registry 
+  ![Add Registry](images/add-registry.png)
+  
   
 ![NiFi Registry bucket creation](images/registry-bucket.png)
 
