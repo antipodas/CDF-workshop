@@ -68,6 +68,7 @@ Modify the hosts file ```sudo vi /etc/hosts```and add a line with your Elastic I
 Execute the following commands to install CDH + CDF 
 ```
 su -
+export PATH=$PATH:/opt/cloudera/parcels/CDH-6.2.0-1.cdh6.2.0.p0.967373/lib/kafka/bin/
 yum install -y git
 yum update -y
 git clone https://github.com/fabiog1901/OneNodeCDHCluster.git
