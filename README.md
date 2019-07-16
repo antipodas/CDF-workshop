@@ -3,7 +3,7 @@
 
 ## Prerequisite
 
-- Launch AWS instance with **t2.2xlarge** instance type
+- Launch AWS instance with **t2.2xlarge** instance type with centOS OS
 - Keep default storage (300GB SSD)
 - Add Elastic IP
 - Set security group with:
@@ -45,6 +45,37 @@ To get this private ip, ssh to the instance and type the command ```ifconfig```,
 
 ![Private IP](images/private-ip.png)
 
+### SSH to the sandbox
+
+On Mac use the terminal to SSH
+
+For Mac users, don't forget to ```chmod 400 /path/to/hdp-workshop.pem``` before ssh'ing
+
+![Image of Mac terminal ssh](images/mac_terminal_ssh.png)
+
+On Windows use [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+![Image of Putty ssh](images/login_with_putty_1.png)
+
+![Image of Putty ssh](images/login_with_putty_2.png)
+
+### Install CDH + CDF
+
+ssh into your machine ```ssh -i /path/to/hdp-workshop.pem centos@demo.cloudera.com```
+
+Modify the hosts file ```sudo vi /etc/hosts```and add a line with your Elastic IP that points to demo.cloudera.com
+
+Execute the following commands to install CDH + CDF 
+```
+su -
+yum install -y git
+yum update -y
+git clone https://github.com/fabiog1901/OneNodeCDHCluster.git
+cd OneNodeCDHCluster
+chmod +x setup.sh
+./setup.sh aws default_template.json
+```
+
 ### Start all HDP and CDF services
 
 **They should be already started**
@@ -62,19 +93,7 @@ If services are not started already, start all services
 
 ![Image of Ambari Start Services](images/start_services.png)
 
-### SSH to the sandbox
 
-On Mac use the terminal to SSH
-
-For Mac users, don't forget to ```chmod 400 /path/to/hdp-workshop.pem``` before ssh'ing
-
-![Image of Mac terminal ssh](images/mac_terminal_ssh.png)
-
-On Windows use [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-
-![Image of Putty ssh](images/login_with_putty_1.png)
-
-![Image of Putty ssh](images/login_with_putty_2.png)
 
 ## Stream data using NiFi
 
