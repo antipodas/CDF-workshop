@@ -201,7 +201,7 @@ Let's get started... Open [NiFi UI](http://demo.cloudera.com:8080/nifi/) and fol
 ![NiFi commit 1](images/commit-1.png)
 ![NiFi commit 2](images/commit-2.png)
 
-If you visit the [NiFi Registry UI](http://demo.cloudera.com:61080/nifi-registry/explorer/grid-list) again you should see your commit.
+If you visit the [NiFi Registry UI](http://demo.cloudera.com:18080/nifi-registry/explorer/grid-list) again you should see your commit.
 
 ![NiFi commit 3](images/commit-3.png)
 
